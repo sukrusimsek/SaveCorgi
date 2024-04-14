@@ -13,6 +13,7 @@
 		8D756DE52BCC25C400C93BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D756DE32BCC25C400C93BC9 /* Main.storyboard */; };
 		8D756DE72BCC25C700C93BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D756DE62BCC25C700C93BC9 /* Assets.xcassets */; };
 		8D756DEA2BCC25C700C93BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D756DE82BCC25C700C93BC9 /* LaunchScreen.storyboard */; };
+		8D756DF22BCC2C4F00C93BC9 /* Ext+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D756DF12BCC2C4F00C93BC9 /* Ext+UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8D756DE62BCC25C700C93BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D756DE92BCC25C700C93BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D756DEB2BCC25C700C93BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D756DF12BCC2C4F00C93BC9 /* Ext+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8D756DE62BCC25C700C93BC9 /* Assets.xcassets */,
 				8D756DE82BCC25C700C93BC9 /* LaunchScreen.storyboard */,
 				8D756DEB2BCC25C700C93BC9 /* Info.plist */,
+				8D756DF12BCC2C4F00C93BC9 /* Ext+UIImage.swift */,
 			);
 			path = "Save Corgi";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D756DE22BCC25C400C93BC9 /* ViewController.swift in Sources */,
+				8D756DF22BCC2C4F00C93BC9 /* Ext+UIImage.swift in Sources */,
 				8D756DDE2BCC25C400C93BC9 /* AppDelegate.swift in Sources */,
 				8D756DE02BCC25C400C93BC9 /* SceneDelegate.swift in Sources */,
 			);
