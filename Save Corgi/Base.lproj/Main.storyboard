@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Z69-r0-w7j">
+            <objects>
+                <viewController id="MmD-zX-Mr7" customClass="ViewController" customModule="SaveTheDot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8GJ-Fn-rYp"/>
+                        <viewControllerLayoutGuide type="bottom" id="tfg-G7-jz3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9qc-eJ-d5e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clC-VZ-Ogw">
+                                <rect key="frame" x="303" y="58.999999999999993" width="74" height="18.666666666666664"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJW-JV-03F">
+                                <rect key="frame" x="146" y="614" width="101" height="24"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Game:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik4-5o-isf">
+                                <rect key="frame" x="16" y="59" width="80.666666666666671" height="20"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAW-2n-f1N"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ik4-5o-isf" firstAttribute="top" secondItem="8GJ-Fn-rYp" secondAttribute="bottom" id="Bgf-VW-iR7"/>
+                            <constraint firstItem="clC-VZ-Ogw" firstAttribute="top" secondItem="8GJ-Fn-rYp" secondAttribute="bottom" id="DSy-12-za7"/>
+                            <constraint firstItem="DJW-JV-03F" firstAttribute="centerX" secondItem="9qc-eJ-d5e" secondAttribute="centerX" id="TrL-k1-cDZ"/>
+                            <constraint firstItem="tfg-G7-jz3" firstAttribute="top" secondItem="DJW-JV-03F" secondAttribute="bottom" constant="180" id="Z3e-Dh-vuL"/>
+                            <constraint firstItem="clC-VZ-Ogw" firstAttribute="trailing" secondItem="9qc-eJ-d5e" secondAttribute="trailingMargin" id="gq0-Yv-non"/>
+                            <constraint firstItem="ik4-5o-isf" firstAttribute="leading" secondItem="9qc-eJ-d5e" secondAttribute="leading" constant="16" id="vH2-F6-1e5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bestTimeLabel" destination="ik4-5o-isf" id="waB-m4-Fv8"/>
+                        <outlet property="clockLabel" destination="clC-VZ-Ogw" id="ojG-kL-XNc"/>
+                        <outlet property="startLabel" destination="DJW-JV-03F" id="qG7-6v-ZKs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgn-SF-meC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="18"/>
+        </scene>
+    </scenes>
+</document>
