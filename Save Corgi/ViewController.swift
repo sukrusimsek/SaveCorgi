@@ -56,10 +56,118 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
                 view.backgroundColor = .lightGray
                 lightDarkButton.setTitle("Light", for: .normal)
                 lightDarkButton.setImage(UIImage(systemName: "sun.max.fill"), for: .normal)
+                lightDarkButton.setTitleColor(.white, for: .normal)
+                if let title = lightDarkButton.titleLabel?.text {
+                    let startBackgroundColor: UIColor
+                    let startClockLabelColor: UIColor
+                    let startStartLabelColor: UIColor
+                    let startBestTimeLabelColor: UIColor
+                    
+                    let endBackgroundColor: UIColor
+                    let endClockLabelColor: UIColor
+                    let endStartLabelColor: UIColor
+                    let endBestTimeLabelColor: UIColor
+                    
+                    if title == "Dark" {
+                        startBackgroundColor = view.backgroundColor ?? .white
+                        startClockLabelColor = clockLabel.textColor ?? .black
+                        startStartLabelColor = startLabel.textColor ?? .black
+                        startBestTimeLabelColor = bestTimeLabel.textColor ?? .black
+                        
+                        endBackgroundColor = .white
+                        endClockLabelColor = .black
+                        endStartLabelColor = .black
+                        endBestTimeLabelColor = .black
+                    } else {
+                        startBackgroundColor = view.backgroundColor ?? .lightGray
+                        startClockLabelColor = clockLabel.textColor ?? .white
+                        startStartLabelColor = startLabel.textColor ?? .white
+                        startBestTimeLabelColor = bestTimeLabel.textColor ?? .white
+                        
+                        endBackgroundColor = .black
+                        endClockLabelColor = .white
+                        endStartLabelColor = .white
+                        endBestTimeLabelColor = .white
+                    }
+                    
+                    UIView.animate(withDuration: 0.2) {
+                        self.view.backgroundColor = endBackgroundColor
+                        self.clockLabel.textColor = endClockLabelColor
+                        self.startLabel.textColor = endStartLabelColor
+                        self.bestTimeLabel.textColor = endBestTimeLabelColor
+                        
+                        self.clockLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                        self.startLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                        self.bestTimeLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                    } completion: { _ in
+                        UIView.animate(withDuration: 0.2) {
+                            self.clockLabel.transform = .identity
+                            self.startLabel.transform = .identity
+                            self.bestTimeLabel.transform = .identity
+                        }
+                    }
+                }
+
+                
             } else {
                 lightDarkButton.setTitle("Dark", for: .normal)
                 view.backgroundColor = .white
                 lightDarkButton.setImage(UIImage(systemName: "moon.fill"), for: .normal)
+                startLabel.textColor = .black
+                clockLabel.textColor = .black
+                bestTimeLabel.textColor = .black
+                lightDarkButton.setTitleColor(.black, for: .normal)
+                if let title = lightDarkButton.titleLabel?.text {
+                    // Başlangıç ve hedef renkler
+                    let startBackgroundColor: UIColor
+                    let startClockLabelColor: UIColor
+                    let startStartLabelColor: UIColor
+                    let startBestTimeLabelColor: UIColor
+                    
+                    let endBackgroundColor: UIColor
+                    let endClockLabelColor: UIColor
+                    let endStartLabelColor: UIColor
+                    let endBestTimeLabelColor: UIColor
+                    
+                    if title == "Dark" {
+                        startBackgroundColor = view.backgroundColor ?? .black
+                        startClockLabelColor = clockLabel.textColor ?? .white
+                        startStartLabelColor = startLabel.textColor ?? .white
+                        startBestTimeLabelColor = bestTimeLabel.textColor ?? .white
+                        
+                        endBackgroundColor = .white
+                        endClockLabelColor = .black
+                        endStartLabelColor = .black
+                        endBestTimeLabelColor = .black
+                    } else {
+                        startBackgroundColor = view.backgroundColor ?? .lightGray
+                        startClockLabelColor = clockLabel.textColor ?? .white
+                        startStartLabelColor = startLabel.textColor ?? .white
+                        startBestTimeLabelColor = bestTimeLabel.textColor ?? .white
+                        
+                        endBackgroundColor = .white
+                        endClockLabelColor = .white
+                        endStartLabelColor = .white
+                        endBestTimeLabelColor = .white
+                    }
+                    
+                    UIView.animate(withDuration: 0.2) {
+                        self.view.backgroundColor = endBackgroundColor
+                        self.clockLabel.textColor = endClockLabelColor
+                        self.startLabel.textColor = endStartLabelColor
+                        self.bestTimeLabel.textColor = endBestTimeLabelColor
+                        
+                        self.clockLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                        self.startLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                        self.bestTimeLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                    } completion: { _ in
+                        UIView.animate(withDuration: 0.2) {
+                            self.clockLabel.transform = .identity
+                            self.startLabel.transform = .identity
+                            self.bestTimeLabel.transform = .identity
+                        }
+                    }
+                }
 
             }
         }
@@ -131,8 +239,8 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
             movePlayer(to: touchLocation)
             moveEnemies(to: touchLocation)
         }
-        guard let touch = touches.first else { return }
-        let touchLocation = touch.location(in: self.view)
+//        guard let touch = touches.first else { return }
+//        let touchLocation = touch.location(in: self.view)
         
         
     }
