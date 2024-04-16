@@ -13,7 +13,7 @@
 		8D756DE52BCC25C400C93BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D756DE32BCC25C400C93BC9 /* Main.storyboard */; };
 		8D756DE72BCC25C700C93BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D756DE62BCC25C700C93BC9 /* Assets.xcassets */; };
 		8D756DEA2BCC25C700C93BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D756DE82BCC25C700C93BC9 /* LaunchScreen.storyboard */; };
-		8D756DF22BCC2C4F00C93BC9 /* Ext+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D756DF12BCC2C4F00C93BC9 /* Ext+UIImage.swift */; };
+		8D9BAE0F2BCEE37800B94AFD /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9BAE0E2BCEE37800B94AFD /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,6 @@
 		8D756DE62BCC25C700C93BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D756DE92BCC25C700C93BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D756DEB2BCC25C700C93BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D756DF12BCC2C4F00C93BC9 /* Ext+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9BAE0F2BCEE37800B94AFD /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +65,6 @@
 				8D756DE62BCC25C700C93BC9 /* Assets.xcassets */,
 				8D756DE82BCC25C700C93BC9 /* LaunchScreen.storyboard */,
 				8D756DEB2BCC25C700C93BC9 /* Info.plist */,
-				8D756DF12BCC2C4F00C93BC9 /* Ext+UIImage.swift */,
 			);
 			path = "Save Corgi";
 			sourceTree = "<group>";
@@ -86,6 +85,9 @@
 			dependencies = (
 			);
 			name = "Save Corgi";
+			packageProductDependencies = (
+				8D9BAE0E2BCEE37800B94AFD /* GoogleMobileAds */,
+			);
 			productName = "Save Corgi";
 			productReference = 8D756DDA2BCC25C400C93BC9 /* Save Corgi.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 8D756DD12BCC25C400C93BC9;
+			packageReferences = (
+				8D9BAE0D2BCEE37800B94AFD /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 8D756DDB2BCC25C400C93BC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D756DE22BCC25C400C93BC9 /* ViewController.swift in Sources */,
-				8D756DF22BCC2C4F00C93BC9 /* Ext+UIImage.swift in Sources */,
 				8D756DDE2BCC25C400C93BC9 /* AppDelegate.swift in Sources */,
 				8D756DE02BCC25C400C93BC9 /* SceneDelegate.swift in Sources */,
 			);
@@ -369,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D9BAE0D2BCEE37800B94AFD /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D9BAE0E2BCEE37800B94AFD /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9BAE0D2BCEE37800B94AFD /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8D756DD22BCC25C400C93BC9 /* Project object */;
 }

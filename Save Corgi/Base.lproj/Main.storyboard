@@ -38,6 +38,17 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oig-k1-MbX">
+                                <rect key="frame" x="149" y="323" width="94" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Dark">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleDarkLight:" destination="MmD-zX-Mr7" eventType="touchUpInside" id="7nN-oT-h04"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SAW-2n-f1N"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,20 +56,24 @@
                             <constraint firstItem="ik4-5o-isf" firstAttribute="top" secondItem="8GJ-Fn-rYp" secondAttribute="bottom" id="Bgf-VW-iR7"/>
                             <constraint firstItem="clC-VZ-Ogw" firstAttribute="top" secondItem="8GJ-Fn-rYp" secondAttribute="bottom" id="DSy-12-za7"/>
                             <constraint firstItem="DJW-JV-03F" firstAttribute="centerX" secondItem="9qc-eJ-d5e" secondAttribute="centerX" id="TrL-k1-cDZ"/>
+                            <constraint firstItem="Oig-k1-MbX" firstAttribute="top" secondItem="SAW-2n-f1N" secondAttribute="top" constant="264" id="Y99-Yo-k0R"/>
+                            <constraint firstItem="SAW-2n-f1N" firstAttribute="trailing" secondItem="Oig-k1-MbX" secondAttribute="trailing" constant="150" id="YXl-0i-frA"/>
                             <constraint firstItem="tfg-G7-jz3" firstAttribute="top" secondItem="DJW-JV-03F" secondAttribute="bottom" constant="180" id="Z3e-Dh-vuL"/>
                             <constraint firstItem="clC-VZ-Ogw" firstAttribute="trailing" secondItem="9qc-eJ-d5e" secondAttribute="trailingMargin" id="gq0-Yv-non"/>
+                            <constraint firstItem="Oig-k1-MbX" firstAttribute="leading" secondItem="SAW-2n-f1N" secondAttribute="leading" constant="149" id="srX-yT-vDY"/>
                             <constraint firstItem="ik4-5o-isf" firstAttribute="leading" secondItem="9qc-eJ-d5e" secondAttribute="leading" constant="16" id="vH2-F6-1e5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bestTimeLabel" destination="ik4-5o-isf" id="waB-m4-Fv8"/>
                         <outlet property="clockLabel" destination="clC-VZ-Ogw" id="ojG-kL-XNc"/>
+                        <outlet property="lightDarkButton" destination="Oig-k1-MbX" id="jHL-yR-7aW"/>
                         <outlet property="startLabel" destination="DJW-JV-03F" id="qG7-6v-ZKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgn-SF-meC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="106"/>
+            <point key="canvasLocation" x="600.76335877862596" y="105.63380281690141"/>
         </scene>
     </scenes>
 </document>
